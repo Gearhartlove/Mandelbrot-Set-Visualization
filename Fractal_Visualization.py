@@ -18,8 +18,8 @@ def MandelbrotFunction (c, maxiter):
 
 def CreateComplexPlain (maxIterations):
     #set the location and size of the complex plane rectangle
-    xvalues = np.linspace(-0.22, -0.21, 1000)
-    yvalues = np.linspace(-0.70, -0.69, 1000)
+    xvalues = np.linspace(0.1, 0.5, 2000)
+    yvalues = np.linspace(-0.1, -0.5, 2000)
 
     #size of these lists of x and y values
     xlen = len(xvalues)
@@ -42,8 +42,9 @@ def Main():
     maxIterations = 40; #number of iterations until considered divergent
     plt.figure(figsize = (18,18))
     #myFractal = CreateComplexPlain(maxIterations)
-    plt.imshow(CreateComplexPlain(maxItedrations).T, interpolation = "nearest")
-    plt.show
+    plt.imshow(CreateComplexPlain(maxIterations).T, interpolation = "nearest")
+    print("finished")
+    plt.show()
 
 #--------------------------------------------------------------------    
 Main()
